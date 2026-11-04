@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // how should be the IDs stored?
-
+char *ids[100];
 
 void parse(char *source) {
   // todo
