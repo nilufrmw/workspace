@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-/* define the structural mold (No typedef!) */
+/* define the structural mold */
 struct port {
   volatile uint32_t DIR;     /* Offset 0x00: Data Direction */
   volatile uint32_t DIRTGL;  /* Offset 0x04: Data Direction Toggle */
