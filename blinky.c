@@ -16,7 +16,6 @@ struct port {
 /* directly cast the raw SAMD21 hardware address to the struct pointer */
 #define PORT_A ((struct port *) 0x41004400)
 
-
 void setup() {
   /* set Pin 17 as an output using the DIRSET register */
   PORT_A->DIRSET = (1 << 17);
