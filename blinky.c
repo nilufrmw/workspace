@@ -1,7 +1,7 @@
 #include <stdint.h>
 
 /* 1. Define the structural mold (No typedef!) */
-struct samd21_port {
+struct port {
   volatile uint32_t DIR;     /* Offset 0x00: Data Direction */
   volatile uint32_t DIRTGL;  /* Offset 0x04: Data Direction Toggle */
   volatile uint32_t DIRCLR;  /* Offset 0x08: Data Direction Clear */
@@ -14,7 +14,7 @@ struct samd21_port {
 };
 
 /* 2. Directly cast the raw SAMD21 hardware address to the struct pointer */
-#define PORT_A ((struct samd21_port *) 0x41004400)
+#define PORT_A ((struct port *) 0x41004400)
 
 
 void setup() {
