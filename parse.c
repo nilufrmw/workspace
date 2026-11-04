@@ -1,13 +1,17 @@
 #include <stdio.h>
 
+// how should be the IDs stored?
+
+
 void parse(char *source) {
-  // how should be the IDs stored
-  
+  // todo
 }
 
 int main(void) {
   char source[100];
   scanf("%s", source);
   
+  parse(source);
+
   return 0;
 }
