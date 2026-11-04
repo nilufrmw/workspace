@@ -25,6 +25,6 @@ void loop() {
   /* toggle Pin 17 using the hardware toggle register */
   PORT_A->OUTTGL = (1 << 17);
     
-  /* Simple delay loop */
+  /* simple delay loop */
   for (volatile int i = 0; i < 100000; i++);
 }
