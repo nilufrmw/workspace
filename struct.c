@@ -1,5 +1,4 @@
-struct date {
-  int day;
-  int month;
-  int year;
+struct node {
+  int data;
+  struct node *nxt;
 };
