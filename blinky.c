@@ -18,12 +18,12 @@ struct port {
 
 void setup() {
   /* set Pin 17 as an output using the DIRSET register */
-  PORT_A->DIRSET = (1 << 17);
+  PORTA->DIRSET = (1 << 17);
 }
 
 void loop() {
   /* toggle Pin 17 using the hardware toggle register */
-  PORT_A->OUTTGL = (1 << 17);
+  PORTA->OUTTGL = (1 << 17);
     
   /* simple delay loop */
   for (volatile int i = 0; i < 100000; i++);
