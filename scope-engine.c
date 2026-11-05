@@ -13,7 +13,7 @@ void parse(char *source) {
 
   /*
   simple fixed stack as 64 levels of nesting is
- impossible to exceed in real code
+  impossible to exceed in real code
   */
   Scope stack[64];
   int stack_size = 0;
