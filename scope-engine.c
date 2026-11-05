@@ -11,7 +11,7 @@ typedef struct {
 void parse(char *source) {
   char *clean = preprocess(source);
   /*
-  A simple fixed stack on the local CPU workspace. 64 levels of nesting is virtually impossible to exceed in real code
+  simple fixed stack on the local CPU workspace. 64 levels of nesting is virtually impossible to exceed in real code
   */
   
   Scope stack[64];
@@ -42,7 +42,7 @@ void parse(char *source) {
     } 
     else if (clean[i] == '}') {
       if(stack_size > 0) {
-        stack_size--; // Pop
+        stack_size--; // pop
       }
     }
   }
