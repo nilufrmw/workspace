@@ -34,11 +34,9 @@ void parse(char *source) {
       printf("%s ", current_id);
 
       // push onto our local fixed stack
-      if(stack_size < 64) {
-        strcpy(stack[stack_size].id, current_id);
-        stack[stack_size].child_count = 0;
-        stack_size++;
-      }
+      strcpy(stack[stack_size].id, current_id);
+      stack[stack_size].child_count = 0;
+      stack_size++;
     } 
     else if (clean[i] == '}') {
       if(stack_size > 0) {
