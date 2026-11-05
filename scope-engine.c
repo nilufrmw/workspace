@@ -22,13 +22,13 @@ void parse(char *source) {
       char current_id[64];
       if(stack_size == 0) {
         strcpy(current_id, "1");
-      } else {
-          // tell parent they have a new child
-          stack[stack_size - 1].child_count++;
-          snprintf(current_id,   sizeof(current_id), "%s.%d", 
-                         stack[stack_size - 1].id, 
-                         stack[stack_size - 1].child_count);
-            }
+      } 
+      else {
+        // tell parent they have a new child
+        stack[stack_size - 1].child_count++;
+        snprintf(current_id, sizeof(current_id),  
+                 "%s.%d", stack[stack_size - 1].id, stack[stack_size - 1].child_count);
+      }
 
             // Report the scope ID right away! No heap storage needed.
             printf("%s ", current_id);
