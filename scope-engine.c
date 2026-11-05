@@ -12,7 +12,7 @@ void parse(char *source) {
   char *clean = preprocess(source);
 
   /*
-  simple fixed stack on the local CPU workspace. 64 levels of nesting is virtually impossible to exceed in real code
+  simple fixed stack as 64 levels of nesting is  impossible to exceed in real code
   */
   Scope stack[64];
   int stack_size = 0;
@@ -33,7 +33,7 @@ void parse(char *source) {
       // report the scope ID right away
       printf("%s ", current_id);
 
-      // push onto our local fixed stack
+      // push to stack
       strcpy(stack[stack_size].id, current_id);
       stack[stack_size].child_count = 0;
       stack_size++;
