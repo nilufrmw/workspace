@@ -34,7 +34,7 @@ void parse(char *source) {
       // report the scope ID right away
       printf("%s ", current_id);
 
-      // push to stack
+      // push
       strcpy(stack[stack_size].id, current_id);
       stack[stack_size].child_count = 0;
       stack_size++;
