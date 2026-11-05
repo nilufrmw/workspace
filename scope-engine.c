@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char *preprocess(const char *soource);
+char *preprocess(const char *source);
 
 typedef struct {
   char id[64];
@@ -30,21 +30,21 @@ void parse(char *source) {
                  "%s.%d", stack[stack_size - 1].id, stack[stack_size - 1].child_count);
       }
 
-            // Report the scope ID right away! No heap storage needed.
-            printf("%s ", current_id);
+      // report the scope ID right away
+      printf("%s ", current_id);
 
-            // Push onto our local fixed stack
-            if (stack_size < 64) {
-                strcpy(stack[stack_size].id, current_id);
-                stack[stack_size].child_count = 0;
-                stack_size++;
-            }
-
-        } else if (clean[i] == '}') {
-            if (stack_size > 0) {
-                stack_size--; // Pop
-            }
-        }
+      // push onto our local fixed stack
+      if(stack_size < 64) {
+        strcpy(stack[stack_size].id, current_id);
+        stack[stack_size].child_count = 0;
+        stack_size++;
+      }
+    } 
+    else if (clean[i] == '}') {
+      if(stack_size > 0) {
+        stack_size--; // Pop
+      }
     }
-    printf("\n");
+  }
+  printf("\n");
 }
