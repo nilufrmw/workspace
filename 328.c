@@ -6,6 +6,6 @@ definition for singly-linked list:
  };
 */
 
-struct node* solve(struct node* head) {
+struct node *solve(struct node* head) {
 
 }
