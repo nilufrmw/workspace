@@ -1,6 +1,5 @@
 #include <stdint.h>
 
-/* define the structural mold */
 struct port {
   volatile uint32_t DIR;     /* Offset 0x00: Data Direction */
   volatile uint32_t DIRTGL;  /* Offset 0x04: Data Direction Toggle */
@@ -12,19 +11,3 @@ struct port {
   volatile uint32_t OUTSET;  /* Offset 0x1C: Data Output Value Set */
   volatile uint32_t IN;      /* Offset 0x20: Data Input Value */
 };
-
-/* directly cast the raw SAMD21 hardware address to the struct pointer */
-#define PORTA ((struct port *) 0x41004400)
-
-void setup() {
-  /* set Pin 17 as an output using the DIRSET register */
-  PORTA->DIRSET = (1 << 17);
-}
-
-void loop() {
-  /* toggle Pin 17 using the hardware toggle register */
-  PORTA->OUTTGL = (1 << 17);
-    
-  /* simple delay loop */
-  for (volatile int i = 0; i < 100000; i++);
-}
