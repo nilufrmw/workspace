@@ -11,7 +11,7 @@ Do not call the standard library memcpy
 #include <stddef.h>
 
 void *my_memcpy(void *dest, const void *src, size_t n) {
-  uint8_t *s = (const uint8_t *) src;
+  const uint8_t *s = (const uint8_t *) src;
   uint8_t *d = (uint8_t *) dest;
   for(size_t i = 0; i < n; ++i) {
     *d++ = *s++;
