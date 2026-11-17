@@ -8,7 +8,7 @@ Do not call the standard library memcpy
 */
 
 
-void *memcpy(void *src, void *dest, size_t n) {
+void *memcpy(void *dest, void *src, size_t n) {
   uint_8 *s = (uin8_t *) s;
   uint_8 *d = (uin8_t *) d;
   void *start = d;
