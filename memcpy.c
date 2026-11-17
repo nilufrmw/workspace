@@ -9,8 +9,8 @@ Do not call the standard library memcpy
 
 
 void *memcpy(void *dest, void *src, size_t n) {
-  uint_8 *s = (uin8_t *) s;
-  uint_8 *d = (uin8_t *) d;
+  uint8_t *s = (uint8_t *) src;
+  uint8_t *d = (uint8_t *) dest;
   void *start = d;
   for(size_t i = 0; i < n; ++i) {
     *d++ = *s++;
