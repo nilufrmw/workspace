@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int cnt[256];
+
 void test_case(void) {
   int n;
   scanf("%d", &n);
@@ -7,7 +9,9 @@ void test_case(void) {
   scanf("%s", s);
   if(n != 5) puts("NO");
   else {
-    int cnt[256];
+    for(int i = 0; i < 256; ++i) {
+      cnt[i] = 0;
+    }
     for(int i = 0; i < n; ++i) {
       cnt[s[i]]++;
     }
