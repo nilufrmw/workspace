@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/1722/problem/A
+
 #include <stdio.h>
 
 int cnt[256];
