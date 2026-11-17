@@ -1,7 +1,8 @@
 /* 
 Implement memcpy — copy n bytes from src to dest and return dest. 
 
-Assumptions (classic interview contract): regions do not overlap. If they might overlap, use memmove.
+Assumptions (classic interview contract): regions do not overlap.
+If they might overlap, use memmove.
 
 Do not call the standard library memcpy
 */
