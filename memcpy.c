@@ -8,7 +8,7 @@ Do not call the standard library memcpy
 */
 
 #include <stdint.h>
-#includr <stddef.h>
+#include <stddef.h>
 
 void *memcpy(void *dest, const void *src, size_t n) {
   uint8_t *s = (uint8_t *) src;
