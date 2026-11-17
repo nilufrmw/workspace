@@ -7,3 +7,7 @@ If they might overlap, use memmove.
 Do not call the standard library memcpy
 */
 
+
+void *memcpy(void *src, void *dest, size_t n) {
+
+}
